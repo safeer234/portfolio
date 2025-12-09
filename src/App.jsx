@@ -52,7 +52,7 @@ function App() {
   return (
     <>
      <header>
-      <nav className='flex fixed  gap-30 lg:gap-180 py-5 px-10 lg:px-14 text-xl font-semibold text-[white]'>
+      <nav className='flex fixed  gap-88 lg:gap-180 py-5 px-10 lg:px-14 text-xl font-semibold text-[white]'>
         <div>
           <a href="#home">Safeer.</a>
           </div>
@@ -95,23 +95,23 @@ function App() {
       {/* sections-home */}
      <section id='home'>
       <div className='block lg:flex'>
-        <div className='text-[white] px-10 py-25 lg:py-0 lg:px-0  lg:mt-42 lg:ml-50 lg:text-7xl'>
-          <h1><span className=' text-md lg:text-[30px]'>Hello i'm</span><br /><span className='text-[#34d399] text-2xl lg:text-7xl'>Safeer <br /> Mohammed K </span> </h1>
-          <p className='lg:text-[30px] lg:mt-2'>And <span className='animate-ping'>i'm a Front-End Developer</span></p>
+        <div className='text-[white] px-20 py-25 lg:py-0 lg:px-0  lg:mt-42 lg:ml-50 lg:text-7xl'>
+          <h1><span className=' text-xl lg:text-[30px]'>Hello i'm</span><br /><span className='text-[#34d399] text-3xl  lg:text-7xl'>Safeer <br /> Mohammed K </span> </h1>
+          <p className='lg:text-[30px]  text-md lg:mt-2'>And <span className='animate-ping'>i'm a Front-End Developer</span></p>
           
 
         </div>
 
-        <div className='  lg:mt-40  lg:ml-262 absolute z-1  '>
+        <div className='  lg:mt-40 ml-20 lg:ml-262 absolute z-1  '>
           
-            <img className=' w-36 h-36 mt-1 lg:mt-0 ml-15 lg:ml-0 lg:w-64 lg:h-65 border  rounded-[410px]' src={profileimg1} alt="" />
+            <img className=' w-46 h-46 mt-1 lg:mt-0 ml-15 lg:ml-0 lg:w-64 lg:h-65 border  rounded-[410px]' src={profileimg1} alt="" />
 
           
           
 
         </div>
 
-        <div className='z-5 w-38 h-38 ml-14   lg:w-65 lg:h-65 lg:mt-40 rounded-[410px] lg:ml-99
+        <div className='z-5 w-48 h-48 ml-34   lg:w-65 lg:h-65 lg:mt-40 rounded-[410px] lg:ml-99
          border-5  border-l-[#34d399] animate-spin'>
 
         </div>
@@ -121,8 +121,8 @@ function App() {
 
 
       </div>
-      <p className=' lg:ml-50  px-10 lg:px-0 py-23 lg:py-5 lg:mt-2 text-sm w-71  lg:w-200 lg:text-[18px] text-[white]'>Aspiring Frontend Developer skilled in creating responsive and user-friendly web interfaces <br />using React.js, JavaScript, HTML5, CSS3, and Tailwind CSS.</p>
-      <div className='flex gap-4 px-10 lg:px-0 lg:ml-50 '>
+      <p className=' lg:ml-50  px-20 lg:px-0 py-23 lg:py-5 lg:mt-2 text-sm w-119  lg:w-200 lg:text-[18px] text-[white]'>Aspiring Frontend Developer skilled in creating responsive and user-friendly web interfaces <br />using React.js, JavaScript, HTML5, CSS3, and Tailwind CSS.</p>
+      <div className='flex gap-4 px-20 lg:px-0 lg:ml-50 '>
         <a href='https://github.com/safeer234' className='border-2 w-10 h-10 hover:translate-y-[-5px] duration-300 ease-in rounded-[30px] overflow-hidden'>
           <svg className='bg-[#34d399] ' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640"><path d="M237.9 461.4C237.9 463.4 235.6 465 232.7 465C229.4 465.3 227.1 463.7 227.1 461.4C227.1 459.4 229.4 457.8 232.3 457.8C235.3 457.5 237.9 459.1 237.9 461.4zM206.8 456.9C206.1 458.9 208.1 461.2 211.1 461.8C213.7 462.8 216.7 461.8 217.3 459.8C217.9 457.8 216 455.5 213 454.6C210.4 453.9 207.5 454.9 206.8 456.9zM251 455.2C248.1 455.9 246.1 457.8 246.4 460.1C246.7 462.1 249.3 463.4 252.3 462.7C255.2 462 257.2 460.1 256.9 458.1C256.6 456.2 253.9 454.9 251 455.2zM316.8 72C178.1 72 72 177.3 72 316C72 426.9 141.8 521.8 241.5 555.2C254.3 557.5 258.8 549.6 258.8 543.1C258.8 536.9 258.5 502.7 258.5 481.7C258.5 481.7 188.5 496.7 173.8 451.9C173.8 451.9 162.4 422.8 146 415.3C146 415.3 123.1 399.6 147.6 399.9C147.6 399.9 172.5 401.9 186.2 425.7C208.1 464.3 244.8 453.2 259.1 446.6C261.4 430.6 267.9 419.5 275.1 412.9C219.2 406.7 162.8 398.6 162.8 302.4C162.8 274.9 170.4 261.1 186.4 243.5C183.8 237 175.3 210.2 189 175.6C209.9 169.1 258 202.6 258 202.6C278 197 299.5 194.1 320.8 194.1C342.1 194.1 363.6 197 383.6 202.6C383.6 202.6 431.7 169 452.6 175.6C466.3 210.3 457.8 237 455.2 243.5C471.2 261.2 481 275 481 302.4C481 398.9 422.1 406.6 366.2 412.9C375.4 420.8 383.2 435.8 383.2 459.3C383.2 493 382.9 534.7 382.9 542.9C382.9 549.4 387.5 557.3 400.2 555C500.2 521.8 568 426.9 568 316C568 177.3 455.5 72 316.8 72zM169.2 416.9C167.9 417.9 168.2 420.2 169.9 422.1C171.5 423.7 173.8 424.4 175.1 423.1C176.4 422.1 176.1 419.8 174.4 417.9C172.8 416.3 170.5 415.6 169.2 416.9zM158.4 408.8C157.7 410.1 158.7 411.7 160.7 412.7C162.3 413.7 164.3 413.4 165 412C165.7 410.7 164.7 409.1 162.7 408.1C160.7 407.5 159.1 407.8 158.4 408.8zM190.8 444.4C189.2 445.7 189.8 448.7 192.1 450.6C194.4 452.9 197.3 453.2 198.6 451.6C199.9 450.3 199.3 447.3 197.3 445.4C195.1 443.1 192.1 442.8 190.8 444.4zM179.4 429.7C177.8 430.7 177.8 433.3 179.4 435.6C181 437.9 183.7 438.9 185 437.9C186.6 436.6 186.6 434 185 431.7C183.6 429.4 181 428.4 179.4 429.7z"/></svg>
 
@@ -147,9 +147,9 @@ function App() {
         
 
       </div>
-      <div className=' flex px-5 lg:px lg:ml-50 mt-10 gap-3'>
-        <button  className=' border-2 border-[#34d399] duration-300 ease-out font-semibold text-[#34d399] hover:bg-[#34d399]  hover:text-[black] rounded-3xl w-30 h-10 text-center justify-center items-center'>Download CV</button>
-        <button  className='bg-[#34d399] duration-300 ease-in font-semibold text-[black] hover:bg-[#09090b] border-2 border-[#34d399] hover:text-[#34d399] rounded-3xl w-30 h-10 text-center justify-center items-center'>Contact Me</button>
+      <div className='ml-20 flex lg:px-0 lg:ml-50 mt-10 gap-4 lg:gap-3'>
+        <button  className=' border-2 border-[#34d399] duration-300 ease-out font-semibold text-[#34d399] hover:bg-[#34d399]  hover:text-[black] rounded-3xl lg:w-30 lg:h-10 w-39 h-10 text-center justify-center items-center'>Download CV</button>
+        <button  className='bg-[#34d399] duration-300 ease-in font-semibold text-[black] hover:bg-[#09090b] border-2 border-[#34d399] hover:text-[#34d399] rounded-3xl lg:w-30 lg:h-10 w-39 h-10 text-center justify-center items-center'>Contact Me</button>
 
 
       </div>
@@ -165,7 +165,7 @@ function App() {
          <div className='lg:flex lg:items-center py-5 lg:py-0 lg:mt-20'>
          
 
-        <div className=' lg:ml-65 px-10 lg:px-0 z-1 lg:z-0 absolute lg:relative lg:py-0  '>
+        <div className=' lg:ml-65 px-35 lg:px-0 z-1 lg:z-0 absolute lg:relative lg:py-0  '>
           <div className=' flex w-52 h-52 lg:w-76 lg:h-76 bg-[#ecfdf5] z-1 mt-30 rounded-[410px] overflow-hidden items-center justify-center duration-300 ease-in hover:bg-[#34d399]   hover:translate-y-1.5 hover:scale-x-110 hover:scale-y-110   '>
              <img className=' w-50 h-50 lg:w-74 lg:h-74 mb-0 rounded-[410px]'src= {profileimg1} alt="" />
           </div>
@@ -178,10 +178,10 @@ function App() {
         
 
 
-        <div className=' text-center mr-30'>
+        <div className=' text-center lg:mr-30'>
           <div className='mt-2 text-center'>
-             <h1 className='text-[#34d399]  lg:ml-50 text-2xl lg:text-6xl  '>About Me</h1>
-             <div className=' underline ml-28 lg:ml-136 mt-2 border-2 border-[#34d399] w-8 lg:w-12 '></div>
+             <h1 className='text-[#34d399] ml-20  lg:ml-50 text-4xl lg:text-6xl  '>About Me</h1>
+             <div className=' underline ml-54 lg:ml-136 mt-2 border-2 border-[#34d399] w-8 lg:w-12 '></div>
 
           </div>
           
@@ -191,7 +191,7 @@ function App() {
           
           
 <div className='lg:flex lg:justify-center lg:items-center lg:text-center'>
- <p className='lg:ml-50 w-70 lg:w-170 px-10  py-80 lg:px-0 lg:py-0 lg:mt-2 text-sm lg:text-[18px] text-[white]'>Motivated Frontend Developer skilled in creating responsive and user-friendly web interfaces using React.js, JavaScript, HTML5, CSS3, and Tailwind CSS. Passionate about crafting engaging digital experiences, integrating APIs, and following clean coding practices. Eager to contribute to innovative web projects in a collaborative, growth-focused environment.</p>
+ <p className='lg:ml-50 w-lg lg:w-170 px-20  py-80 lg:px-0 lg:py-0 lg:mt-2 text-md lg:text-[18px] text-[white]'>Motivated Frontend Developer skilled in creating responsive and user-friendly web interfaces using React.js, JavaScript, HTML5, CSS3, and Tailwind CSS. Passionate about crafting engaging digital experiences, integrating APIs, and following clean coding practices. Eager to contribute to innovative web projects in a collaborative, growth-focused environment.</p>
 </div>
            
             
@@ -212,8 +212,8 @@ function App() {
      <section id='skills'>
       <div className='lg:text-center lg:mt-100'>
         
-           <p className='text-[#34d399] px-30 lg:px-0 text-2xl lg:text-6xl'>Skills</p>
-           <div className=' underline mt-2 ml-34 lg:ml-183 border-2 border-[#34d399]  w-6 lg:w-12 '></div>
+           <p className='text-[#34d399] px-52 lg:px-0 text-4xl lg:text-6xl'>Skills</p>
+           <div className=' underline mt-2 ml-59 lg:ml-183 border-2 border-[#34d399]  w-6 lg:w-12 '></div>
 
        
        
@@ -221,8 +221,8 @@ function App() {
             
       </div>
 
-      <div className='flex items-center justify-center'>
-        <div className=' mt-10 mr-20 lg:mr-0 lg:grid grid-cols-2 md:grid-cols-4 lg:grid-cols-4 gap-3 lg:gap-6 p-6 '>
+      <div className='lg:flex  lg:items-center lg:justify-center'>
+        <div className=' mt-10 ml-19 lg:px-0 lg:mr-0 grid grid-cols-2 md:grid-cols-4 lg:grid-cols-4 gap-17 lg:gap-6 lg:p-6 '>
 
         {skills.map((skill, index) => {
           return(
@@ -248,17 +248,17 @@ function App() {
      {/* sections-projects */}
      <section id='projects'>
      <div className='lg:text-center mt-85'>
-        <p className='text-[#34d399] px-25 lg:px-0 text-2xl lg:text-6xl'>Projects</p>
+        <p className='text-[#34d399] px-45 lg:px-0 text-4xl lg:text-6xl'>Projects</p>
         
-            <div className=' underline ml-32 mt-2 lg:mt-3  lg:ml-183 border-2 border-[#34d399] w-8 lg:w-12 '></div>
+            <div className=' underline ml-56 mt-2 lg:mt-3  lg:ml-183 border-2 border-[#34d399] w-8 lg:w-12 '></div>
       </div>
 
       <div className='flex justify-center gap-4'>
-        <div className=' mt-10 mr-15 lg:mr-0  lg:grid grid-cols-3 md:grid-cols-4 lg:grid-cols-3 gap-10 p-6 '>
+        <div className=' mt-10  ml-33 lg:ml-0  lg:grid grid-cols-3 md:grid-cols-4 lg:grid-cols-3 gap-10 p-6 '>
 
         {projects.map((project, index) => {
           return(
-            <div className=' mb-10 lg:mb-0 flex lg:w-70 w-50 h- lg:h-80   justify-center p-3 px-2   text-2xl text-[#34d399] font-medium rounded-2xl border-[white]  border-3 bg-[#09090b]   duration-300 ease-in hover:border-3 hover:border-[#34d399] '>
+            <div className=' mb-10 lg:mb-0 flex lg:w-70 w-70 h- lg:h-80   justify-center p-3 px-2   text-2xl text-[#34d399] font-medium rounded-2xl border-[white]  border-3 bg-[#09090b]   duration-300 ease-in hover:border-3 hover:border-[#34d399] '>
               <ProjectCard project={project}  key={index} />
 
             </div>
