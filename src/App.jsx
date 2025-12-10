@@ -16,6 +16,7 @@ function App() {
 
    const [isRise, setIsRise] = useState(false);
     const [isPop, setIsPop] = useState(false);
+    const [active, setActive] = useState(null);
 
 
   useEffect(() => {
@@ -295,9 +296,13 @@ function App() {
                 <button onClick={()=> {setIsPop(!isPop); setIsPop("cv"); setTimeout(() => setIsPop(false), 500)}} className={`border-2 border-[#34d399] text-[#34d399] font-semibold rounded-3xl px-6 py-2  transition duration-300 ease-in ${isPop ==="cv" ? "bg-[#34d399] text-black scale-110":"border-2 border-[#34d399] text-[#34d399] scale-100" }`}>
                   Download CV
                 </button>
-                <button onClick={()=>{setIsPop(!isPop); setIsPop("contact"); setTimeout(()=> setIsPop(false),500)}} className={` bg-[#34d399] text-black font-semibold rounded-3xl px-6 py-2  transition duration-300 ease-in ${isPop === "contact" ? " bg-[#020617] border-2 border-[#34d399]  scale-110 text-emerald-300": " text-black bg-[#34d399] scale-100" }`}>
-                  Contact Me
-                </button>
+                
+                  <a href="#contact"
+                  onClick={()=>{setIsPop(!isPop); setIsPop("contact"); setTimeout(()=> setIsPop(false),500)}} className={` bg-[#34d399] text-black font-semibold rounded-3xl px-6 py-2  transition duration-300 ease-in ${isPop === "contact" ? " bg-[#020617] border-2 border-[#34d399]  scale-110 text-emerald-300" : " text-black bg-[#34d399] scale-100" }`}>
+                  Contact Me 
+                </a>
+               
+                
               </div>
             </div>
 
@@ -323,7 +328,7 @@ function App() {
           id="about"
           className="max-w-6xl mx-auto px-4 py-10 lg:mt-35 lg:py-20"
         >
-          <div className="flex flex-col lg:flex-row items-center gap-10 lg:gap-16">
+          <div className="flex flex-col lg:flex-row items-center gap-10 lg:gap-30">
             {/* About Image */}
          <div className="flex items-center justify-center">
   <div
@@ -334,7 +339,7 @@ function App() {
       flex items-center justify-center 
       transition-transform duration-300 ease-in-out 
       cursor-pointer 
-      ${isRise ? "scale-125 bg-[#34d399]" : "scale-100 bg-white "}
+      ${isRise ?    "scale-100 bg-white shadow-none " : "scale-125 bg-[#34d399]  shadow-[0_0_30px_#34d399]  " }
     `}
   >
     <img
@@ -371,7 +376,7 @@ function App() {
           className="max-w-6xl mx-auto px-4 py-10 lg:mt-75 lg:py-20"
         >
           <div className="text-center">
-            <p className="text-[#34d399] text-2xl lg:text-4xl font-bold">
+            <p className="text-[#34d399] text-2xl lg:text-4xl font-bold animate-translaye-y-1.5">
               Skills
             </p>
             <div className="w-12 h-2px bg-[#34d399] mx-auto mt-2"></div>
@@ -381,7 +386,8 @@ function App() {
             {skills.map((skill, index) => (
               <div
                 key={index}
-                className="flex items-center justify-center py-3 rounded-2xl border-2 border-[#34d399] bg-[#020617] text-[#34d399] text-lg font-medium ease-in hover:bg-[#34d399] hover:text-black transition-transform duration-300 hover:-translate-y-1.5 hover:scale-x-110 hover:scale-y-110"
+                onClick={()=>{setActive(index);setTimeout(()=>setActive(null),80000)}}
+                className={`flex items-center justify-center hover:bg-[#34d399] hover:text-black py-3 rounded-2xl  text-lg font-medium ease-in ${active === index ? "bg-[#34d399] text-black transition-transform duration-300 translate-y-1.5 scale-x-110 scale-y-110 shadow-[0_0_30px_#34d399] " : "border-2 border-[#34d399] bg-[#020617] text-[#34d399] shadow-none"}`}
               >
             
                   <SkillCard   skill={skill} />
@@ -408,7 +414,8 @@ function App() {
             {projects.map((project, index) => (
               <div
                 key={index}
-                className="flex justify-center rounded-2xl border border-white lg:border-white/20  bg-[#020617] hover:border-[#34d399] p-4 transition"
+               
+                className="flex justify-center border lg:border-white/20 rounded-2xl  bg-[#020617] hover:border-[#34d399] p-4 transition"
               >
                 <ProjectCard project={project} />
               </div>
