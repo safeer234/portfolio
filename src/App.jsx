@@ -14,6 +14,10 @@ function App() {
 
     const [activeSection, setActiveSection] = useState("home");
 
+   const [isRise, setIsRise] = useState(false);
+    const [isPop, setIsPop] = useState(false);
+
+
   useEffect(() => {
     const sections = document.querySelectorAll("section");
 
@@ -288,10 +292,10 @@ function App() {
 
               {/* Buttons */}
               <div className="flex flex-wrap gap-4 mt-8">
-                <button className="border-2 border-[#34d399] text-[#34d399] font-semibold rounded-3xl px-6 py-2 hover:bg-[#34d399] hover:text-black transition duration-300 ease-in">
+                <button onClick={()=> {setIsPop(!isPop); setIsPop("cv"); setTimeout(() => setIsPop(false), 500)}} className={`border-2 border-[#34d399] text-[#34d399] font-semibold rounded-3xl px-6 py-2  transition duration-300 ease-in ${isPop ==="cv" ? "bg-[#34d399] text-black scale-110":"border-2 border-[#34d399] text-[#34d399] scale-100" }`}>
                   Download CV
                 </button>
-                <button className="border-2 border-[#34d399] bg-[#34d399] text-black font-semibold rounded-3xl px-6 py-2 hover:bg-[#020617] hover:text-[#34d399] transition duration-300 ease-out">
+                <button onClick={()=>{setIsPop(!isPop); setIsPop("contact"); setTimeout(()=> setIsPop(false),500)}} className={` bg-[#34d399] text-black font-semibold rounded-3xl px-6 py-2  transition duration-300 ease-in ${isPop === "contact" ? " bg-[#020617] border-2 border-[#34d399]  scale-110 text-emerald-300": " text-black bg-[#34d399] scale-100" }`}>
                   Contact Me
                 </button>
               </div>
@@ -321,15 +325,27 @@ function App() {
         >
           <div className="flex flex-col lg:flex-row items-center gap-10 lg:gap-16">
             {/* About Image */}
-            <div className="flex items-center justify-center">
-              <div className="w-40 h-40 lg:w-64 lg:h-64 bg-[#ecfdf5] rounded-full overflow-hidden ease-in-out  flex items-center justify-center hover:scale-x-110 hover:scale-y-110 hover:bg-[#34d399] transition-transform duration-300 hover:scale-105">
-                <img
-                  src={profileimg1}
-                  alt="Safeer"
-                  className="w-36 h-36 lg:w-60 lg:h-60 rounded-full object-cover"
-                />
-              </div>
-            </div>
+         <div className="flex items-center justify-center">
+  <div
+    onClick={() => {setIsRise(!isRise); setTimeout(()=>setIsRise(isRise),500)}}
+    className={`
+      w-40 h-40 lg:w-64 lg:h-64 
+      rounded-full overflow-hidden 
+      flex items-center justify-center 
+      transition-transform duration-300 ease-in-out 
+      cursor-pointer 
+      ${isRise ? "scale-100 bg-white" : "scale-125 bg-[#34d399] hover:scale-100 hover:bg-[#34d399]"}
+    `}
+  >
+    <img
+      src={profileimg1}
+      alt="Safeer"
+      className="w-36 h-36 lg:w-60 lg:h-60 rounded-full object-cover"
+    />
+  </div>
+</div>
+
+           
 
             {/* About Text */}
             <div className="text-center lg:text-left">
@@ -367,7 +383,10 @@ function App() {
                 key={index}
                 className="flex items-center justify-center py-3 rounded-2xl border-2 border-[#34d399] bg-[#020617] text-[#34d399] text-lg font-medium ease-in hover:bg-[#34d399] hover:text-black transition-transform duration-300 hover:-translate-y-1.5 hover:scale-x-110 hover:scale-y-110"
               >
-                <SkillCard skill={skill} />
+            
+                  <SkillCard   skill={skill} />
+              
+                
               </div>
             ))}
           </div>
