@@ -327,14 +327,14 @@ function App() {
             {/* About Image */}
          <div className="flex items-center justify-center">
   <div
-    onClick={() => {setIsRise(!isRise); setTimeout(()=>setIsRise(isRise),500)}}
+    onClick={() => {setIsRise(!isRise); setTimeout(()=>setIsRise(isRise),700)}}
     className={`
       w-40 h-40 lg:w-64 lg:h-64 
       rounded-full overflow-hidden 
       flex items-center justify-center 
       transition-transform duration-300 ease-in-out 
       cursor-pointer 
-      ${isRise ? "scale-100 bg-white" : "scale-125 bg-[#34d399] hover:scale-100 hover:bg-[#34d399]"}
+      ${isRise ? "scale-125 bg-[#34d399]" : "scale-100 bg-white "}
     `}
   >
     <img
