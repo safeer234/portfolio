@@ -4,7 +4,7 @@ body{
   background-color:#09090b;
 
 }
-a:hover{
+.nav:hover{
   color: #34d399;
   transition: 0.5s;
   animation-duration: 300s;
