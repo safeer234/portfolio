@@ -8,6 +8,7 @@ import projectimg3 from "./images/Screenshot 2025-11-24 225354.png";
 import { Menu, X } from "lucide-react";
 import { useState, useEffect } from "react";
 import Contact from "./component/Contact";
+import Footer from "./component/Footer";
 
 function App() {
   const [isOpen, setIsOpen] = useState(false);
@@ -293,12 +294,12 @@ function App() {
 
               {/* Buttons */}
               <div className="flex flex-wrap gap-4 mt-8">
-                <button onClick={()=> {setIsPop(!isPop); setIsPop("cv"); setTimeout(() => setIsPop(false), 500)}} className={`border-2 border-[#34d399] text-[#34d399] font-semibold rounded-3xl px-6 py-2  transition duration-300 ease-in ${isPop ==="cv" ? "bg-[#34d399] text-black scale-110":"border-2 border-[#34d399] text-[#34d399] scale-100" }`}>
+                <button onClick={()=> {setIsPop(!isPop); setIsPop("cv"); setTimeout(() => setIsPop(false), 500)}} className={`border-2 border-[#34d399] text-[#34d399] font-semibold rounded-3xl px-6 py-2  transition duration-300 ease-in ${isPop ==="cv" ? "bg-[#34d399] text-black ":"border-2 border-[#34d399] text-[#34d399] " }`}>
                   Download CV
                 </button>
                 
                   <a href="#contact"
-                  onClick={()=>{setIsPop(!isPop); setIsPop("contact"); setTimeout(()=> setIsPop(false),500)}} className={` bg-[#34d399] text-black font-semibold rounded-3xl px-6 py-2  transition duration-300 ease-in ${isPop === "contact" ? " bg-[#020617] border-2 border-[#34d399]  scale-110 text-emerald-300" : " text-black bg-[#34d399] scale-100" }`}>
+                  onClick={()=>{setIsPop(!isPop); setIsPop("contact"); setTimeout(()=> setIsPop(false),500)}} className={` font-semibold rounded-3xl px-6 py-2  transition duration-300 ease-in ${isPop === "contact" ? " bg-[#020617] border-2 border-[#34d399]   text-emerald-300" : " text-black bg-[#34d399]  " }`}>
                   Contact Me 
                 </a>
                
@@ -386,7 +387,7 @@ function App() {
             {skills.map((skill, index) => (
               <div
                 key={index}
-                onClick={()=>{setActive(index);setTimeout(()=>setActive(null),80000)}}
+                onClick={()=>{setActive(index);setTimeout(()=>setActive(null),30000)}}
                 className={`flex items-center justify-center hover:bg-[#34d399] hover:text-black py-3 rounded-2xl  text-lg font-medium ease-in ${active === index ? "bg-[#34d399] text-black transition-transform duration-300 translate-y-1.5 scale-x-110 scale-y-110 shadow-[0_0_30px_#34d399] " : "border-2 border-[#34d399] bg-[#020617] text-[#34d399] shadow-none"}`}
               >
             
@@ -431,7 +432,11 @@ function App() {
           <Contact />
           {/* Add your contact form/content here later */}
         </section>
+
+
       </main>
+
+      <Footer />
     </div>
   );
 }
