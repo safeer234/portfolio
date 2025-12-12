@@ -113,7 +113,7 @@ function App() {
 
         {/* Mobile menu */}
         {isOpen && (
-          <ul className="lg:hidden flex flex-col gap-3 bg-white text-sm text-[#57534e] p-4 shadow-md absolute top-16 left-0 right-0 z-40">
+          <ul className="lg:hidden flex flex-col gap-3 bg-[#020617] text-sm text-white p-4 shadow-md absolute top-16 left-0 right-0 z-40">
             {["home", "about", "skills", "projects", "contact"].map((sec) => (
               <a
                 key={sec}
