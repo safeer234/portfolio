@@ -8,6 +8,7 @@ import projectimg3 from "./images/Screenshot 2025-11-24 225354.png";
 import { Menu, X } from "lucide-react";
 import { useState, useEffect } from "react";
 import { motion as MOTION } from "framer-motion";
+import downloadres from "../src/download/Safeer_Frontend_Resume_90plus.pdf"
 
 
 import Contact from "./component/Contact";
@@ -173,17 +174,19 @@ function App() {
 
               {/* Buttons */}
               <div className="flex flex-wrap gap-4 mt-8">
-                <button
+                <a
+                href={downloadres}
+                download={downloadres}
                   onClick={() => {
                     setIsPop("cv");
                     setTimeout(() => setIsPop(false), 200);
                   }}
                   className={`border-2 border-[#34d399] text-[#34d399] font-semibold rounded-3xl px-6 py-2 transition ${
-                    isPop === "cv" ? "bg-[#34d399] text-black" : ""
+                    isPop === "cv" ? "bg-[#34d399] text-black shadow-[0_0_30px_#34d399]" : " border-2 border-[#34d399] text-[#34d399] shadow-none "
                   }`}
                 >
                   Download CV
-                </button>
+                </a>
 
                 <a
                   href="#contact"
@@ -193,8 +196,8 @@ function App() {
                   }}
                   className={`font-semibold  rounded-3xl px-6 py-2 duration-300 ease-out ${
                     isPop === "contact"
-                      ? "bg-[#020617] border-2 border-[#34d399] text-emerald-300"
-                      : "text-black bg-[#34d399]"
+                      ? "bg-[#020617] border-2 border-[#34d399] text-emerald-300 shadow-[0_0_30px_#34d399]"
+                      : "text-black bg-[#34d399] shadow-none"
                   }`}
                 >
                   Contact Me
